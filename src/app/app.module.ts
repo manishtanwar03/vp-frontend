@@ -3,14 +3,21 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
+
+import { FormsModule } from "@angular/forms";
+import { HttpClientModule } from "@angular/common/http";
+import { DeviceService } from './videocall/settings/device.service';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [DeviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
